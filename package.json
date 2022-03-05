@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./index.js",
+    "commit":"npx cz"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,15 @@
     "express": "^4.17.1",
     "multer": "^1.4.3",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "nodemon": "^2.0.15"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
