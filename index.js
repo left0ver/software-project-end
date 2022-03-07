@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const express = require("express");
 const app = express();
 const loginRouter = require("./router/login-register/login");
@@ -36,4 +37,8 @@ app.use("/article/like", likeRouter);
 app.use("/article/comment", commentRouter);
 app.use("/article/reply", replyRouter);
 app.use("/code", codeRouter);
+//development
 app.listen(8000, "127.0.0.1");
+
+// production
+// app.listen(8000, "0.0.0.0");
